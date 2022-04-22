@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebAppMovie1.Models.MovieCast>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movie Cast</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieCastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movie.MovieName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.PersonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonRole.PersonRole1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieCastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movie.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.PersonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonRole.PersonRole1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieCastID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieCastID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieCastID })
+        </td>
+    </tr>
+}
+
+</table>

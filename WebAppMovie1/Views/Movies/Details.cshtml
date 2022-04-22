@@ -1,0 +1,42 @@
+﻿@model WebAppMovie1.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieReleaseDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

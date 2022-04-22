@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3d52d7ddff314251b08d19d00b5e7e2f" Name="Diagram1">
+        <EntityTypeShape EntityType="MovieDBModel.Genre" Width="1.5" PointX="10.375" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Movie" Width="1.5" PointX="7.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Movie_Genre" Width="1.5" PointX="10.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.MovieCast" Width="1.5" PointX="6.875" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.Person" Width="1.5" PointX="3.125" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieDBModel.PersonRole" Width="1.5" PointX="2.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="MovieDBModel.FK_dbo_Movie_Genre_Genre_dbo_Genre_GenreID" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.FK_dbo_Movie_Genre_Movie_dbo_MovieID" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.FK_dbo_MovieCast_dbo_Movie_MovieID" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.FK_dbo_MovieCast_dbo_Person_PersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieDBModel.FK_dbo_MovieCast_dbo_PersonRole_PersonRoleID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
